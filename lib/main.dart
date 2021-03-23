@@ -1,4 +1,4 @@
-import 'package:cinema_flutter_app/screens/authentecation/welcome_screen.dart';
+import 'package:cinema_flutter_app/screens/authentecation/onboarding_screen.dart';
 import 'package:cinema_flutter_app/screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 void main() {
   runApp(CinemaApp());
 }
+
 
 class CinemaApp extends StatelessWidget {
   @override
@@ -19,7 +20,7 @@ class CinemaApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blueGrey,
         ),
-        home: WelcomeScreen(),
+        home: OnBoardingScreen(),
       ),
     );
   }
