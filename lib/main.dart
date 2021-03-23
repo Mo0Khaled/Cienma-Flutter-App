@@ -1,4 +1,3 @@
-import 'package:cinema_flutter_app/screens/authentecation/auth_screen.dart';
 import 'package:cinema_flutter_app/screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,7 +22,7 @@ class CinemaApp extends StatelessWidget {
             bodyText1: TextStyle(color: Colors.white),
           )
         ),
-        home: AuthenticationScreen(),
+        home: HomePage(),
       ),
     );
   }

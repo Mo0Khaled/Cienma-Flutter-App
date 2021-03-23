@@ -100,6 +100,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                         height: 15,
                       ),
                       TextFormField(
+                        controller: _passwordController,
                         decoration: InputDecoration(
                           labelText: "Password",
                           labelStyle: TextStyle(color: Colors.white),
@@ -136,6 +137,8 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                           validator: (value) {
                             if (value.isEmpty)
                               return "Please Enter Your Password Again";
+                            if (_passwordController.text != value)
+                              return 'This Password Does not match';
                             return null;
                           },
                         ),
@@ -188,9 +191,8 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                     child: Text(
                       "${_authMode == AuthMode.LogIn ? 'Sign Up' : 'Sign In'}",
                       style: TextStyle(
-                        fontSize: ScreenUtil().setSp(16),
-                        color: Colors.white
-                      ),
+                          fontSize: ScreenUtil().setSp(16),
+                          color: Colors.white),
                     ),
                   ),
                 ),
